@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "SecureTab Manager",
+  "version": "1.0.0",
+  "description": "Secure tab session and bookmark management with zero external requests",
+  "permissions": [
+    "tabs",
+    "bookmarks",
+    "storage"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "SecureTab Manager"
+  },
+  "options_page": "options.html",
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
+  }
+}
